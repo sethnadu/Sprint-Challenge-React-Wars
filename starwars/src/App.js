@@ -1,17 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import PersonCard from "./components/PersonCard.js";
+import axios from "axios";
 import './App.css';
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+  const [characters, setCharacters] = useState("");
+  const [num, setNum] = useState("1");
 
-  // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  useEffect(() => {
+    axios
+    .get(`https://swapi.co/api/people/?page=${num}`)
+    .then((response) => {
+      setCharacters(response.data.results);
+      console.log(response.data.results)
+    })
+    .catch((error) => {
+      console.log("Something went Wrong!", error)
+    })
+  }, [num])
 
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      {Object.values(characters).map(object => {
+        return <PersonCard key = {object.Name} name = {object.name} height = {object.height} birth = {object.birth_year} mass = {object.mass} gender ={object.gender} setNum = {num}/>
+      })}
     </div>
   );
 }
