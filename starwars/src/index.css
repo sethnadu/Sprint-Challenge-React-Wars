@@ -4,6 +4,6 @@ body {
   font-family: sans-serif;
   background-image: url('./sw-bg.jpg');
   background-size: center;
-  background-position: fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }

@@ -12,7 +12,7 @@ const Box = styled.div`
   border-radius: 10px;
 
   &: hover {
-    box-shadow: 5px 10px 20px black;
+    box-shadow: 10px 10px 40px black;
   }
 `;
 
