@@ -1,7 +1,26 @@
 import React, {useState, useEffect} from 'react';
 import PersonCard from "./components/PersonCard.js";
+import styled from "styled-components";
 import axios from "axios";
 import './App.css';
+
+
+
+
+// Styled Components for APP
+
+const BoxesTogether = styled.div `
+padding-top: 50px;
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+margin: auto;
+width: 100%;
+
+`
+
+
+
 
 const App = () => {
   const [characters, setCharacters] = useState("");
@@ -22,9 +41,11 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <BoxesTogether>
       {Object.values(characters).map(object => {
-        return <PersonCard key = {object.Name} name = {object.name} height = {object.height} birth = {object.birth_year} mass = {object.mass} gender ={object.gender} setNum = {num}/>
+        return <PersonCard key = {object.name} name = {object.name} height = {object.height} birth = {object.birth_year} mass = {object.mass} gender ={object.gender} setNum = {num}/>
       })}
+      </BoxesTogether>
     </div>
   );
 }
