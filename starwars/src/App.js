@@ -5,6 +5,27 @@ import styled from "styled-components";
 import axios from "axios";
 import "./App.scss";
 
+
+// SnapShot
+// import '@testing-library/react/cleanup-after-each';
+// import '@testing-library/jest-dom/extend-expect';
+// import {render, fireEvent} from '@testing-library/react';
+// import HiddenMessage from './HiddenMessage';
+
+ // Snapshot
+//  test('shows the props when the checkbox is checked', () => {
+//   const testMessage = 'Test Message';
+//   const {queryByText, getByLabelText, getByText} = render(
+//     <HiddenMessage>{testMessage}</HiddenMessage>
+//   )
+//   expect(queryByText(testMessage)).toBeNull()
+// })
+
+
+
+
+
+
 // Styled Components for APP
 
 const BoxesTogether = styled.div`
@@ -37,6 +58,10 @@ const App = () => {
   const [characters, setCharacters] = useState("");
   const [num, setNum] = useState("https://swapi.co/api/people/?page=1");
   const [change, setChange] = useState("");
+  // const [films, setFilms] = useState("");
+ 
+  
+ 
 
   //  uesEffect call to axios, setStates
 
@@ -72,15 +97,19 @@ const App = () => {
             <PersonCard
               key={object.name}
               name={object.name}
-              height={object.height}
-              birth={object.birth_year}
-              mass={object.mass}
-              gender={object.gender}
-              
+              height={object.height.toUpperCase()}
+              birth={object.birth_year.toUpperCase()}
+              hairColor ={object.hair_color.toUpperCase()}
+              eyeColor ={object.eye_color.toUpperCase()}
+              mass={object.mass.toUpperCase()}
+              gender={object.gender.toUpperCase()}
+              // film = {film}
+              // setFilm = {setFilm}
             />
           );
         })}
       </BoxesTogether>
+     
     </div>
   );
 };

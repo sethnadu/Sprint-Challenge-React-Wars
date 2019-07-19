@@ -1,11 +1,12 @@
 import React from "react";
+// import Films from "./Films";
 import styled from "styled-components";
 
 const Box = styled.div`
   display: flex;
   border: 4px solid #ffe300;
   color: #ffe300;
-  background: black;
+  background-color: black;
   width: 500px;
   margin: 20px;
   flex-direction: column;
@@ -13,6 +14,7 @@ const Box = styled.div`
 
   &: hover {
     box-shadow: 10px 10px 40px black;
+    background: url("https://ak3.picdn.net/shutterstock/videos/22001743/thumb/1.jpg?ip=x480");
   }
 `;
 
@@ -48,9 +50,18 @@ function PersonCard(props) {
           {props.mass}
         </p>
         <p>
+          <Span>Hair Color: </Span>
+          {props.hairColor}
+        </p>
+        <p>
+          <Span>Eye Color: </Span>
+          {props.eyeColor}
+        </p>
+        <p>
           <Span>Birth Year: </Span>
           {props.birth}
         </p>
+       {/* <Films setFilm = {props.setFilm} film = {props.film} /> */}
       </SmallBox>
     </Box>
   );

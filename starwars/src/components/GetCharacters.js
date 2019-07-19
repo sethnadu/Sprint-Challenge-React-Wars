@@ -8,10 +8,19 @@ const Buttons = styled.button `
     width: 100px;
     font-size: 1.2rem;
     margin: 10px;
-    background: black;
+    background: url("https://ak3.picdn.net/shutterstock/videos/22001743/thumb/1.jpg?ip=x480");
+    background-color: black;
     border: 2px solid #ffe300;
     border-radius: 5px;
     padding: 5px 10px;
+
+    &:hover {
+        transform: scale(1.5);
+        background-image: url("https://static.comicvine.com/uploads/original/11125/111252200/5638741-green.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 
 `;
 
