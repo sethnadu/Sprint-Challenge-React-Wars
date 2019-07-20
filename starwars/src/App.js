@@ -95,14 +95,15 @@ const App = () => {
         {Object.values(characters).map(object => {
           return (
             <PersonCard
-              key={object.name}
-              name={object.name}
-              height={object.height.toUpperCase()}
-              birth={object.birth_year.toUpperCase()}
-              hairColor ={object.hair_color.toUpperCase()}
-              eyeColor ={object.eye_color.toUpperCase()}
-              mass={object.mass.toUpperCase()}
-              gender={object.gender.toUpperCase()}
+                object = {object}
+              // key={object.name}
+              // name={object.name}
+              // height={object.height.toUpperCase()}
+              // birth={object.birth_year.toUpperCase()}
+              // hairColor ={object.hair_color.toUpperCase()}
+              // eyeColor ={object.eye_color.toUpperCase()}
+              // mass={object.mass.toUpperCase()}
+              // gender={object.gender.toUpperCase()}
               // film = {film}
               // setFilm = {setFilm}
             />

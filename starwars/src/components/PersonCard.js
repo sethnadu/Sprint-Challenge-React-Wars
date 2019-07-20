@@ -35,31 +35,31 @@ const SmallBox = styled.div`
 function PersonCard(props) {
   return (
     <Box>
-      <h1>{props.name}</h1>
+      <h1>{props.object.name}</h1>
       <SmallBox>
         <p>
           <Span>Gender: </Span>
-          {props.gender}
+          {props.object.gender.toUpperCase()}
         </p>
         <p>
           <Span>Height: </Span>
-          {props.height}
+          {props.object.height.toUpperCase()}
         </p>
         <p>
           <Span>Mass: </Span>
-          {props.mass}
+          {props.object.mass.toUpperCase()}
         </p>
         <p>
           <Span>Hair Color: </Span>
-          {props.hairColor}
+          {props.object.hair_color.toUpperCase()}
         </p>
         <p>
           <Span>Eye Color: </Span>
-          {props.eyeColor}
+          {props.object.eye_color.toUpperCase()}
         </p>
         <p>
           <Span>Birth Year: </Span>
-          {props.birth}
+          {props.object.birth_year.toUpperCase()}
         </p>
        {/* <Films setFilm = {props.setFilm} film = {props.film} /> */}
       </SmallBox>
